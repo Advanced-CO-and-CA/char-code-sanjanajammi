@@ -21,15 +21,15 @@
   @ DATA SECTION
 	.data
 	Input:	
-		STRING: String1: .word 0x43 ,0x53, 0x43, 0x36, 0x32, 0x30  @'C','S','6','6','2','0'
+		STRING: String1: .word 0x43 ,0x53, 0x36, 0x36, 0x32, 0x30  @'C','S','6','6','2','0'
 		SUBSTR: String2: .word 0x36, 0x32, 0x30   @'6','2','0'
-	Output:	
-		PRESENT: .word 0x00000000
 	
+	Output:	
+		PRESENT: .word 0
 	Length_string: .word(String2 - String1) /4    @length of STRING
 	Length_substr: .word(Output - String2) / 4    @length of SUBSTR
 	
-
+	
   @ TEXT section
       .text
 
